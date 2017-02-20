@@ -1,0 +1,1145 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1601463B1E52A34A000A7202 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601463A1E52A34A000A7202 /* HomeModel.swift */; };
+		1601463D1E52E662000A7202 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601463C1E52E662000A7202 /* HomeTableView.swift */; };
+		1601463F1E52ED10000A7202 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601463E1E52ED10000A7202 /* HomeTableViewCell.swift */; };
+		1606ED441E45A50000347CBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1606ED431E45A50000347CBD /* AppDelegate.swift */; };
+		1606ED491E45A50000347CBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1606ED471E45A50000347CBD /* Main.storyboard */; };
+		1606ED4B1E45A50000347CBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1606ED4A1E45A50000347CBD /* Assets.xcassets */; };
+		1606ED4E1E45A50000347CBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1606ED4C1E45A50000347CBD /* LaunchScreen.storyboard */; };
+		1606ED591E45A50000347CBD /* weibo_Zhou_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1606ED581E45A50000347CBD /* weibo_Zhou_swiftTests.swift */; };
+		1606ED641E45A50000347CBD /* weibo_Zhou_swiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1606ED631E45A50000347CBD /* weibo_Zhou_swiftUITests.swift */; };
+		163FDA6D1E4C636200DC33B8 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163FDA6C1E4C636200DC33B8 /* Common.swift */; };
+		163FDA6F1E4C645E00DC33B8 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163FDA6E1E4C645E00DC33B8 /* BaseTabBarController.swift */; };
+		163FDA711E4C647A00DC33B8 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163FDA701E4C647A00DC33B8 /* BaseNavigationController.swift */; };
+		163FDA731E4C648C00DC33B8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163FDA721E4C648C00DC33B8 /* BaseViewController.swift */; };
+		163FDA751E4C64B200DC33B8 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163FDA741E4C64B200DC33B8 /* BaseTableViewController.swift */; };
+		163FDA771E4C684900DC33B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163FDA761E4C684900DC33B8 /* HomeViewController.swift */; };
+		163FDA791E4C685700DC33B8 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163FDA781E4C685700DC33B8 /* NewsViewController.swift */; };
+		163FDA7B1E4C686600DC33B8 /* PublishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163FDA7A1E4C686600DC33B8 /* PublishViewController.swift */; };
+		163FDA7D1E4C687D00DC33B8 /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163FDA7C1E4C687D00DC33B8 /* FindViewController.swift */; };
+		163FDA7F1E4C688800DC33B8 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163FDA7E1E4C688800DC33B8 /* MeViewController.swift */; };
+		16EB54091E5155FA0090F7A9 /* PersonalInfoCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB54081E5155FA0090F7A9 /* PersonalInfoCenter.swift */; };
+		16EB540B1E51567B0090F7A9 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB540A1E51567B0090F7A9 /* UserData.swift */; };
+		16EB540D1E5192050090F7A9 /* URLMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB540C1E5192050090F7A9 /* URLMacro.swift */; };
+		16EB540F1E5193F60090F7A9 /* NetWorkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB540E1E5193F60090F7A9 /* NetWorkTool.swift */; };
+		16EB54121E519FF80090F7A9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB54111E519FF80090F7A9 /* HomeViewModel.swift */; };
+		16EB54141E51A08D0090F7A9 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB54131E51A08D0090F7A9 /* BaseViewModel.swift */; };
+		16ED1E251E53ED0E007342F8 /* HomeStatusLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED1E241E53ED0E007342F8 /* HomeStatusLayout.swift */; };
+		16F0899B1E5A83FA0059A875 /* ZhouDateTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F0899A1E5A83FA0059A875 /* ZhouDateTools.swift */; };
+		16F18C8C1E4D5BF700DF7A9D /* BaseTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F18C8B1E4D5BF700DF7A9D /* BaseTabBar.swift */; };
+		4220F44475714D65EC53B05D /* Pods_weibo_Zhou_swiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8BBF5D7BA42827F23937BF /* Pods_weibo_Zhou_swiftUITests.framework */; };
+		6E695B4BBE52BC3F795913BB /* Pods_weibo_Zhou_swiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FEA777C541DF73EE5D5F7E4 /* Pods_weibo_Zhou_swiftTests.framework */; };
+		755E88BE69EB1D329E631345 /* Pods_weibo_Zhou_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A255C1C5A51631ED19073580 /* Pods_weibo_Zhou_swift.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1606ED551E45A50000347CBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1606ED381E45A50000347CBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1606ED3F1E45A50000347CBD;
+			remoteInfo = weibo_Zhou.swift;
+		};
+		1606ED601E45A50000347CBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1606ED381E45A50000347CBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1606ED3F1E45A50000347CBD;
+			remoteInfo = weibo_Zhou.swift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1601463A1E52A34A000A7202 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		1601463C1E52E662000A7202 /* HomeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
+		1601463E1E52ED10000A7202 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		1606ED401E45A50000347CBD /* weibo_Zhou.swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo_Zhou.swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1606ED431E45A50000347CBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1606ED481E45A50000347CBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1606ED4A1E45A50000347CBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1606ED4D1E45A50000347CBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1606ED4F1E45A50000347CBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1606ED541E45A50000347CBD /* weibo_Zhou.swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weibo_Zhou.swiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1606ED581E45A50000347CBD /* weibo_Zhou_swiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weibo_Zhou_swiftTests.swift; sourceTree = "<group>"; };
+		1606ED5A1E45A50000347CBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1606ED5F1E45A50000347CBD /* weibo_Zhou.swiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weibo_Zhou.swiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1606ED631E45A50000347CBD /* weibo_Zhou_swiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weibo_Zhou_swiftUITests.swift; sourceTree = "<group>"; };
+		1606ED651E45A50000347CBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		163FDA6C1E4C636200DC33B8 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		163FDA6E1E4C645E00DC33B8 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		163FDA701E4C647A00DC33B8 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		163FDA721E4C648C00DC33B8 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		163FDA741E4C64B200DC33B8 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		163FDA761E4C684900DC33B8 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		163FDA781E4C685700DC33B8 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		163FDA7A1E4C686600DC33B8 /* PublishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishViewController.swift; sourceTree = "<group>"; };
+		163FDA7C1E4C687D00DC33B8 /* FindViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
+		163FDA7E1E4C688800DC33B8 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		16EB54081E5155FA0090F7A9 /* PersonalInfoCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoCenter.swift; sourceTree = "<group>"; };
+		16EB540A1E51567B0090F7A9 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		16EB540C1E5192050090F7A9 /* URLMacro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLMacro.swift; sourceTree = "<group>"; };
+		16EB540E1E5193F60090F7A9 /* NetWorkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkTool.swift; sourceTree = "<group>"; };
+		16EB54111E519FF80090F7A9 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		16EB54131E51A08D0090F7A9 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		16ED1E241E53ED0E007342F8 /* HomeStatusLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeStatusLayout.swift; sourceTree = "<group>"; };
+		16F0899A1E5A83FA0059A875 /* ZhouDateTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhouDateTools.swift; sourceTree = "<group>"; };
+		16F18C8B1E4D5BF700DF7A9D /* BaseTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBar.swift; sourceTree = "<group>"; };
+		16F18CFA1E4DAB5300DF7A9D /* weibo_Zhou.swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "weibo_Zhou.swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		4E544581F59982FE49A70835 /* Pods-weibo_Zhou.swiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weibo_Zhou.swiftUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-weibo_Zhou.swiftUITests/Pods-weibo_Zhou.swiftUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5B8BBF5D7BA42827F23937BF /* Pods_weibo_Zhou_swiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weibo_Zhou_swiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FEA777C541DF73EE5D5F7E4 /* Pods_weibo_Zhou_swiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weibo_Zhou_swiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92B9DFFBDFFE1CBE3D31AB54 /* Pods-weibo_Zhou.swiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weibo_Zhou.swiftUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weibo_Zhou.swiftUITests/Pods-weibo_Zhou.swiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		99D6FC861CE5748949754E45 /* Pods-weibo_Zhou.swiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weibo_Zhou.swiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weibo_Zhou.swiftTests/Pods-weibo_Zhou.swiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A255C1C5A51631ED19073580 /* Pods_weibo_Zhou_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weibo_Zhou_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B83DA7B1FB4955F47D77A0F1 /* Pods-weibo_Zhou.swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weibo_Zhou.swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-weibo_Zhou.swift/Pods-weibo_Zhou.swift.release.xcconfig"; sourceTree = "<group>"; };
+		C034CD7F7AC02B4273A992BE /* Pods-weibo_Zhou.swiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weibo_Zhou.swiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-weibo_Zhou.swiftTests/Pods-weibo_Zhou.swiftTests.release.xcconfig"; sourceTree = "<group>"; };
+		C181A9291B82A89377197F6C /* Pods-weibo_Zhou.swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weibo_Zhou.swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weibo_Zhou.swift/Pods-weibo_Zhou.swift.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1606ED3D1E45A50000347CBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				755E88BE69EB1D329E631345 /* Pods_weibo_Zhou_swift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1606ED511E45A50000347CBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E695B4BBE52BC3F795913BB /* Pods_weibo_Zhou_swiftTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1606ED5C1E45A50000347CBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4220F44475714D65EC53B05D /* Pods_weibo_Zhou_swiftUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1606ED371E45A50000347CBD = {
+			isa = PBXGroup;
+			children = (
+				1606ED421E45A50000347CBD /* weibo_Zhou.swift */,
+				1606ED571E45A50000347CBD /* weibo_Zhou.swiftTests */,
+				1606ED621E45A50000347CBD /* weibo_Zhou.swiftUITests */,
+				1606ED411E45A50000347CBD /* Products */,
+				B4A13BEAF9F22946B5E80AC2 /* Pods */,
+				60ED4A181A2FDA5A3F305C02 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1606ED411E45A50000347CBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1606ED401E45A50000347CBD /* weibo_Zhou.swift.app */,
+				1606ED541E45A50000347CBD /* weibo_Zhou.swiftTests.xctest */,
+				1606ED5F1E45A50000347CBD /* weibo_Zhou.swiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1606ED421E45A50000347CBD /* weibo_Zhou.swift */ = {
+			isa = PBXGroup;
+			children = (
+				1606ED431E45A50000347CBD /* AppDelegate.swift */,
+				163FDA461E4C61C000DC33B8 /* Classes */,
+				1606ED471E45A50000347CBD /* Main.storyboard */,
+				1606ED4A1E45A50000347CBD /* Assets.xcassets */,
+				1606ED4C1E45A50000347CBD /* LaunchScreen.storyboard */,
+				1606ED4F1E45A50000347CBD /* Info.plist */,
+			);
+			path = weibo_Zhou.swift;
+			sourceTree = "<group>";
+		};
+		1606ED571E45A50000347CBD /* weibo_Zhou.swiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				1606ED581E45A50000347CBD /* weibo_Zhou_swiftTests.swift */,
+				1606ED5A1E45A50000347CBD /* Info.plist */,
+			);
+			path = weibo_Zhou.swiftTests;
+			sourceTree = "<group>";
+		};
+		1606ED621E45A50000347CBD /* weibo_Zhou.swiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1606ED631E45A50000347CBD /* weibo_Zhou_swiftUITests.swift */,
+				1606ED651E45A50000347CBD /* Info.plist */,
+			);
+			path = weibo_Zhou.swiftUITests;
+			sourceTree = "<group>";
+		};
+		163FDA461E4C61C000DC33B8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				163FDA531E4C61C000DC33B8 /* Home */,
+				163FDA601E4C61C000DC33B8 /* News */,
+				163FDA651E4C61C000DC33B8 /* Publish */,
+				163FDA4E1E4C61C000DC33B8 /* Find */,
+				163FDA5A1E4C61C000DC33B8 /* Me */,
+				163FDA581E4C61C000DC33B8 /* Login */,
+				163FDA471E4C61C000DC33B8 /* Base */,
+				163FDA4C1E4C61C000DC33B8 /* Categories */,
+				163FDA4D1E4C61C000DC33B8 /* DB */,
+				163FDA591E4C61C000DC33B8 /* Macro */,
+				163FDA5F1E4C61C000DC33B8 /* NetWorking */,
+				163FDA6A1E4C61C000DC33B8 /* Tools */,
+				163FDA6B1E4C61C000DC33B8 /* Vendor */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		163FDA471E4C61C000DC33B8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				163FDA481E4C61C000DC33B8 /* Controller */,
+				163FDA491E4C61C000DC33B8 /* Model */,
+				163FDA4A1E4C61C000DC33B8 /* View */,
+				163FDA4B1E4C61C000DC33B8 /* ViewModel */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		163FDA481E4C61C000DC33B8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				163FDA6E1E4C645E00DC33B8 /* BaseTabBarController.swift */,
+				163FDA701E4C647A00DC33B8 /* BaseNavigationController.swift */,
+				163FDA721E4C648C00DC33B8 /* BaseViewController.swift */,
+				163FDA741E4C64B200DC33B8 /* BaseTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		163FDA491E4C61C000DC33B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				16EB54081E5155FA0090F7A9 /* PersonalInfoCenter.swift */,
+				16EB540A1E51567B0090F7A9 /* UserData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		163FDA4A1E4C61C000DC33B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				16F18C8B1E4D5BF700DF7A9D /* BaseTabBar.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		163FDA4B1E4C61C000DC33B8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				16EB54131E51A08D0090F7A9 /* BaseViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		163FDA4C1E4C61C000DC33B8 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		163FDA4D1E4C61C000DC33B8 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		163FDA4E1E4C61C000DC33B8 /* Find */ = {
+			isa = PBXGroup;
+			children = (
+				163FDA4F1E4C61C000DC33B8 /* Controller */,
+				163FDA501E4C61C000DC33B8 /* Model */,
+				163FDA511E4C61C000DC33B8 /* View */,
+				163FDA521E4C61C000DC33B8 /* ViewModel */,
+			);
+			path = Find;
+			sourceTree = "<group>";
+		};
+		163FDA4F1E4C61C000DC33B8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				163FDA7C1E4C687D00DC33B8 /* FindViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		163FDA501E4C61C000DC33B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		163FDA511E4C61C000DC33B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		163FDA521E4C61C000DC33B8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		163FDA531E4C61C000DC33B8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				163FDA541E4C61C000DC33B8 /* Controller */,
+				163FDA551E4C61C000DC33B8 /* Model */,
+				163FDA561E4C61C000DC33B8 /* View */,
+				163FDA571E4C61C000DC33B8 /* ViewModel */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		163FDA541E4C61C000DC33B8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				163FDA761E4C684900DC33B8 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		163FDA551E4C61C000DC33B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1601463A1E52A34A000A7202 /* HomeModel.swift */,
+				16ED1E241E53ED0E007342F8 /* HomeStatusLayout.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		163FDA561E4C61C000DC33B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1601463C1E52E662000A7202 /* HomeTableView.swift */,
+				1601463E1E52ED10000A7202 /* HomeTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		163FDA571E4C61C000DC33B8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				16EB54111E519FF80090F7A9 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		163FDA581E4C61C000DC33B8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		163FDA591E4C61C000DC33B8 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				16EB540C1E5192050090F7A9 /* URLMacro.swift */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		163FDA5A1E4C61C000DC33B8 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				163FDA5B1E4C61C000DC33B8 /* Controller */,
+				163FDA5C1E4C61C000DC33B8 /* Model */,
+				163FDA5D1E4C61C000DC33B8 /* View */,
+				163FDA5E1E4C61C000DC33B8 /* ViewModel */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		163FDA5B1E4C61C000DC33B8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				163FDA7E1E4C688800DC33B8 /* MeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		163FDA5C1E4C61C000DC33B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		163FDA5D1E4C61C000DC33B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		163FDA5E1E4C61C000DC33B8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		163FDA5F1E4C61C000DC33B8 /* NetWorking */ = {
+			isa = PBXGroup;
+			children = (
+				16EB540E1E5193F60090F7A9 /* NetWorkTool.swift */,
+			);
+			path = NetWorking;
+			sourceTree = "<group>";
+		};
+		163FDA601E4C61C000DC33B8 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				163FDA611E4C61C000DC33B8 /* Controller */,
+				163FDA621E4C61C000DC33B8 /* Model */,
+				163FDA631E4C61C000DC33B8 /* View */,
+				163FDA641E4C61C000DC33B8 /* ViewModel */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		163FDA611E4C61C000DC33B8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				163FDA781E4C685700DC33B8 /* NewsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		163FDA621E4C61C000DC33B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		163FDA631E4C61C000DC33B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		163FDA641E4C61C000DC33B8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		163FDA651E4C61C000DC33B8 /* Publish */ = {
+			isa = PBXGroup;
+			children = (
+				163FDA661E4C61C000DC33B8 /* Controller */,
+				163FDA671E4C61C000DC33B8 /* Model */,
+				163FDA681E4C61C000DC33B8 /* View */,
+				163FDA691E4C61C000DC33B8 /* ViewModel */,
+			);
+			path = Publish;
+			sourceTree = "<group>";
+		};
+		163FDA661E4C61C000DC33B8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				163FDA7A1E4C686600DC33B8 /* PublishViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		163FDA671E4C61C000DC33B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		163FDA681E4C61C000DC33B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		163FDA691E4C61C000DC33B8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		163FDA6A1E4C61C000DC33B8 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				163FDA6C1E4C636200DC33B8 /* Common.swift */,
+				16F0899A1E5A83FA0059A875 /* ZhouDateTools.swift */,
+				16F18CFA1E4DAB5300DF7A9D /* weibo_Zhou.swift-Bridging-Header.h */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		163FDA6B1E4C61C000DC33B8 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		60ED4A181A2FDA5A3F305C02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A255C1C5A51631ED19073580 /* Pods_weibo_Zhou_swift.framework */,
+				7FEA777C541DF73EE5D5F7E4 /* Pods_weibo_Zhou_swiftTests.framework */,
+				5B8BBF5D7BA42827F23937BF /* Pods_weibo_Zhou_swiftUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4A13BEAF9F22946B5E80AC2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C181A9291B82A89377197F6C /* Pods-weibo_Zhou.swift.debug.xcconfig */,
+				B83DA7B1FB4955F47D77A0F1 /* Pods-weibo_Zhou.swift.release.xcconfig */,
+				99D6FC861CE5748949754E45 /* Pods-weibo_Zhou.swiftTests.debug.xcconfig */,
+				C034CD7F7AC02B4273A992BE /* Pods-weibo_Zhou.swiftTests.release.xcconfig */,
+				92B9DFFBDFFE1CBE3D31AB54 /* Pods-weibo_Zhou.swiftUITests.debug.xcconfig */,
+				4E544581F59982FE49A70835 /* Pods-weibo_Zhou.swiftUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1606ED3F1E45A50000347CBD /* weibo_Zhou.swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1606ED681E45A50000347CBD /* Build configuration list for PBXNativeTarget "weibo_Zhou.swift" */;
+			buildPhases = (
+				1E411CCCFB0D653AB1F7EE4E /* [CP] Check Pods Manifest.lock */,
+				1606ED3C1E45A50000347CBD /* Sources */,
+				1606ED3D1E45A50000347CBD /* Frameworks */,
+				1606ED3E1E45A50000347CBD /* Resources */,
+				EA70A1E496B294CB0D4693C5 /* [CP] Embed Pods Frameworks */,
+				DC788D2FB08F7C9E28B154BE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = weibo_Zhou.swift;
+			productName = weibo_Zhou.swift;
+			productReference = 1606ED401E45A50000347CBD /* weibo_Zhou.swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1606ED531E45A50000347CBD /* weibo_Zhou.swiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1606ED6B1E45A50000347CBD /* Build configuration list for PBXNativeTarget "weibo_Zhou.swiftTests" */;
+			buildPhases = (
+				48C2B97DCAA7F1D7CE7E8528 /* [CP] Check Pods Manifest.lock */,
+				1606ED501E45A50000347CBD /* Sources */,
+				1606ED511E45A50000347CBD /* Frameworks */,
+				1606ED521E45A50000347CBD /* Resources */,
+				CF3AE57EC66C9B2C2EA077EB /* [CP] Embed Pods Frameworks */,
+				C3819D29475D57EC15C38427 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1606ED561E45A50000347CBD /* PBXTargetDependency */,
+			);
+			name = weibo_Zhou.swiftTests;
+			productName = weibo_Zhou.swiftTests;
+			productReference = 1606ED541E45A50000347CBD /* weibo_Zhou.swiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1606ED5E1E45A50000347CBD /* weibo_Zhou.swiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1606ED6E1E45A50000347CBD /* Build configuration list for PBXNativeTarget "weibo_Zhou.swiftUITests" */;
+			buildPhases = (
+				B5D8F3F5E052757AF902E40D /* [CP] Check Pods Manifest.lock */,
+				1606ED5B1E45A50000347CBD /* Sources */,
+				1606ED5C1E45A50000347CBD /* Frameworks */,
+				1606ED5D1E45A50000347CBD /* Resources */,
+				CD2D10E8B934A4520742C234 /* [CP] Embed Pods Frameworks */,
+				E740E9DC68FCDA2E26551CC7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1606ED611E45A50000347CBD /* PBXTargetDependency */,
+			);
+			name = weibo_Zhou.swiftUITests;
+			productName = weibo_Zhou.swiftUITests;
+			productReference = 1606ED5F1E45A50000347CBD /* weibo_Zhou.swiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1606ED381E45A50000347CBD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Zhou;
+				TargetAttributes = {
+					1606ED3F1E45A50000347CBD = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = MHGUPAXN5B;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+					1606ED531E45A50000347CBD = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1606ED3F1E45A50000347CBD;
+					};
+					1606ED5E1E45A50000347CBD = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1606ED3F1E45A50000347CBD;
+					};
+				};
+			};
+			buildConfigurationList = 1606ED3B1E45A50000347CBD /* Build configuration list for PBXProject "weibo_Zhou.swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1606ED371E45A50000347CBD;
+			productRefGroup = 1606ED411E45A50000347CBD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1606ED3F1E45A50000347CBD /* weibo_Zhou.swift */,
+				1606ED531E45A50000347CBD /* weibo_Zhou.swiftTests */,
+				1606ED5E1E45A50000347CBD /* weibo_Zhou.swiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1606ED3E1E45A50000347CBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1606ED4E1E45A50000347CBD /* LaunchScreen.storyboard in Resources */,
+				1606ED4B1E45A50000347CBD /* Assets.xcassets in Resources */,
+				1606ED491E45A50000347CBD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1606ED521E45A50000347CBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1606ED5D1E45A50000347CBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E411CCCFB0D653AB1F7EE4E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		48C2B97DCAA7F1D7CE7E8528 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B5D8F3F5E052757AF902E40D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C3819D29475D57EC15C38427 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-weibo_Zhou.swiftTests/Pods-weibo_Zhou.swiftTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD2D10E8B934A4520742C234 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-weibo_Zhou.swiftUITests/Pods-weibo_Zhou.swiftUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF3AE57EC66C9B2C2EA077EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-weibo_Zhou.swiftTests/Pods-weibo_Zhou.swiftTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC788D2FB08F7C9E28B154BE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-weibo_Zhou.swift/Pods-weibo_Zhou.swift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E740E9DC68FCDA2E26551CC7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-weibo_Zhou.swiftUITests/Pods-weibo_Zhou.swiftUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA70A1E496B294CB0D4693C5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-weibo_Zhou.swift/Pods-weibo_Zhou.swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1606ED3C1E45A50000347CBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16EB54121E519FF80090F7A9 /* HomeViewModel.swift in Sources */,
+				163FDA751E4C64B200DC33B8 /* BaseTableViewController.swift in Sources */,
+				163FDA7F1E4C688800DC33B8 /* MeViewController.swift in Sources */,
+				16EB540B1E51567B0090F7A9 /* UserData.swift in Sources */,
+				1601463B1E52A34A000A7202 /* HomeModel.swift in Sources */,
+				16F18C8C1E4D5BF700DF7A9D /* BaseTabBar.swift in Sources */,
+				1601463D1E52E662000A7202 /* HomeTableView.swift in Sources */,
+				16EB54141E51A08D0090F7A9 /* BaseViewModel.swift in Sources */,
+				16EB540F1E5193F60090F7A9 /* NetWorkTool.swift in Sources */,
+				1601463F1E52ED10000A7202 /* HomeTableViewCell.swift in Sources */,
+				16ED1E251E53ED0E007342F8 /* HomeStatusLayout.swift in Sources */,
+				16EB54091E5155FA0090F7A9 /* PersonalInfoCenter.swift in Sources */,
+				16F0899B1E5A83FA0059A875 /* ZhouDateTools.swift in Sources */,
+				163FDA731E4C648C00DC33B8 /* BaseViewController.swift in Sources */,
+				163FDA711E4C647A00DC33B8 /* BaseNavigationController.swift in Sources */,
+				163FDA6D1E4C636200DC33B8 /* Common.swift in Sources */,
+				1606ED441E45A50000347CBD /* AppDelegate.swift in Sources */,
+				16EB540D1E5192050090F7A9 /* URLMacro.swift in Sources */,
+				163FDA7D1E4C687D00DC33B8 /* FindViewController.swift in Sources */,
+				163FDA771E4C684900DC33B8 /* HomeViewController.swift in Sources */,
+				163FDA6F1E4C645E00DC33B8 /* BaseTabBarController.swift in Sources */,
+				163FDA791E4C685700DC33B8 /* NewsViewController.swift in Sources */,
+				163FDA7B1E4C686600DC33B8 /* PublishViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1606ED501E45A50000347CBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1606ED591E45A50000347CBD /* weibo_Zhou_swiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1606ED5B1E45A50000347CBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1606ED641E45A50000347CBD /* weibo_Zhou_swiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1606ED561E45A50000347CBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1606ED3F1E45A50000347CBD /* weibo_Zhou.swift */;
+			targetProxy = 1606ED551E45A50000347CBD /* PBXContainerItemProxy */;
+		};
+		1606ED611E45A50000347CBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1606ED3F1E45A50000347CBD /* weibo_Zhou.swift */;
+			targetProxy = 1606ED601E45A50000347CBD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1606ED471E45A50000347CBD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1606ED481E45A50000347CBD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1606ED4C1E45A50000347CBD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1606ED4D1E45A50000347CBD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1606ED661E45A50000347CBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1606ED671E45A50000347CBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1606ED691E45A50000347CBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C181A9291B82A89377197F6C /* Pods-weibo_Zhou.swift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = MHGUPAXN5B;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = weibo_Zhou.swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/weibo_Zhou.swift/Classes/Vendor/libWeiboSDK",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Zhou.weibo-Zhou-swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "weibo_Zhou.swift/Classes/Tools/weibo_Zhou.swift-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		1606ED6A1E45A50000347CBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B83DA7B1FB4955F47D77A0F1 /* Pods-weibo_Zhou.swift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = MHGUPAXN5B;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = weibo_Zhou.swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/weibo_Zhou.swift/Classes/Vendor/libWeiboSDK",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Zhou.weibo-Zhou-swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "weibo_Zhou.swift/Classes/Tools/weibo_Zhou.swift-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		1606ED6C1E45A50000347CBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99D6FC861CE5748949754E45 /* Pods-weibo_Zhou.swiftTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = weibo_Zhou.swiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Zhou.weibo-Zhou-swiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/weibo_Zhou.swift.app/weibo_Zhou.swift";
+			};
+			name = Debug;
+		};
+		1606ED6D1E45A50000347CBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C034CD7F7AC02B4273A992BE /* Pods-weibo_Zhou.swiftTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = weibo_Zhou.swiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Zhou.weibo-Zhou-swiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/weibo_Zhou.swift.app/weibo_Zhou.swift";
+			};
+			name = Release;
+		};
+		1606ED6F1E45A50000347CBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92B9DFFBDFFE1CBE3D31AB54 /* Pods-weibo_Zhou.swiftUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = weibo_Zhou.swiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Zhou.weibo-Zhou-swiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = weibo_Zhou.swift;
+			};
+			name = Debug;
+		};
+		1606ED701E45A50000347CBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E544581F59982FE49A70835 /* Pods-weibo_Zhou.swiftUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = weibo_Zhou.swiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Zhou.weibo-Zhou-swiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = weibo_Zhou.swift;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1606ED3B1E45A50000347CBD /* Build configuration list for PBXProject "weibo_Zhou.swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1606ED661E45A50000347CBD /* Debug */,
+				1606ED671E45A50000347CBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1606ED681E45A50000347CBD /* Build configuration list for PBXNativeTarget "weibo_Zhou.swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1606ED691E45A50000347CBD /* Debug */,
+				1606ED6A1E45A50000347CBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1606ED6B1E45A50000347CBD /* Build configuration list for PBXNativeTarget "weibo_Zhou.swiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1606ED6C1E45A50000347CBD /* Debug */,
+				1606ED6D1E45A50000347CBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1606ED6E1E45A50000347CBD /* Build configuration list for PBXNativeTarget "weibo_Zhou.swiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1606ED6F1E45A50000347CBD /* Debug */,
+				1606ED701E45A50000347CBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1606ED381E45A50000347CBD /* Project object */;
+}

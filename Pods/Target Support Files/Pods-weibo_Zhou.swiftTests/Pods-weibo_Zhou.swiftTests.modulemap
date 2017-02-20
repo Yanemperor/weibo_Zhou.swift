@@ -1,0 +1,6 @@
+framework module Pods_weibo_Zhou_swiftTests {
+  umbrella header "Pods-weibo_Zhou.swiftTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
