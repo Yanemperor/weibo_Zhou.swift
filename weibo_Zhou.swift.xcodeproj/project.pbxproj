@@ -10,6 +10,8 @@
 		1601463B1E52A34A000A7202 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601463A1E52A34A000A7202 /* HomeModel.swift */; };
 		1601463D1E52E662000A7202 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601463C1E52E662000A7202 /* HomeTableView.swift */; };
 		1601463F1E52ED10000A7202 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601463E1E52ED10000A7202 /* HomeTableViewCell.swift */; };
+		160222701E6E97C800761017 /* ZhouRegularExpressionsTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1602226F1E6E97C800761017 /* ZhouRegularExpressionsTools.swift */; };
+		1602B1F31E78D73D00BEBB4B /* WBPicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1602B1F21E78D73D00BEBB4B /* WBPicsView.swift */; };
 		1606ED441E45A50000347CBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1606ED431E45A50000347CBD /* AppDelegate.swift */; };
 		1606ED491E45A50000347CBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1606ED471E45A50000347CBD /* Main.storyboard */; };
 		1606ED4B1E45A50000347CBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1606ED4A1E45A50000347CBD /* Assets.xcassets */; };
@@ -26,6 +28,14 @@
 		163FDA7B1E4C686600DC33B8 /* PublishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163FDA7A1E4C686600DC33B8 /* PublishViewController.swift */; };
 		163FDA7D1E4C687D00DC33B8 /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163FDA7C1E4C687D00DC33B8 /* FindViewController.swift */; };
 		163FDA7F1E4C688800DC33B8 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163FDA7E1E4C688800DC33B8 /* MeViewController.swift */; };
+		16E834A81E6FEA7D00106A8D /* EmoticonWeibo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 16E834A71E6FEA7D00106A8D /* EmoticonWeibo.bundle */; };
+		16E834AA1E6FEA8700106A8D /* EmoticonQQ.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 16E834A91E6FEA8700106A8D /* EmoticonQQ.bundle */; };
+		16E834AC1E6FEADD00106A8D /* EmoticonTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E834AB1E6FEADD00106A8D /* EmoticonTools.swift */; };
+		16EAE18C1E77D90600115BEC /* HomeNomalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EAE18B1E77D90600115BEC /* HomeNomalCell.swift */; };
+		16EAE18E1E77D92100115BEC /* HomePicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EAE18D1E77D92100115BEC /* HomePicCell.swift */; };
+		16EAE1901E77D96400115BEC /* HomeRetweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EAE18F1E77D96400115BEC /* HomeRetweetCell.swift */; };
+		16EAE1921E77D96F00115BEC /* HomeRetweetPicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EAE1911E77D96F00115BEC /* HomeRetweetPicCell.swift */; };
+		16EAE1941E77DAD100115BEC /* WBStatusTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EAE1931E77DAD100115BEC /* WBStatusTitleView.swift */; };
 		16EB54091E5155FA0090F7A9 /* PersonalInfoCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB54081E5155FA0090F7A9 /* PersonalInfoCenter.swift */; };
 		16EB540B1E51567B0090F7A9 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB540A1E51567B0090F7A9 /* UserData.swift */; };
 		16EB540D1E5192050090F7A9 /* URLMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB540C1E5192050090F7A9 /* URLMacro.swift */; };
@@ -61,6 +71,8 @@
 		1601463A1E52A34A000A7202 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		1601463C1E52E662000A7202 /* HomeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
 		1601463E1E52ED10000A7202 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		1602226F1E6E97C800761017 /* ZhouRegularExpressionsTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhouRegularExpressionsTools.swift; sourceTree = "<group>"; };
+		1602B1F21E78D73D00BEBB4B /* WBPicsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBPicsView.swift; sourceTree = "<group>"; };
 		1606ED401E45A50000347CBD /* weibo_Zhou.swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo_Zhou.swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1606ED431E45A50000347CBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1606ED481E45A50000347CBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,6 +95,14 @@
 		163FDA7A1E4C686600DC33B8 /* PublishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishViewController.swift; sourceTree = "<group>"; };
 		163FDA7C1E4C687D00DC33B8 /* FindViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
 		163FDA7E1E4C688800DC33B8 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		16E834A71E6FEA7D00106A8D /* EmoticonWeibo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EmoticonWeibo.bundle; sourceTree = "<group>"; };
+		16E834A91E6FEA8700106A8D /* EmoticonQQ.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EmoticonQQ.bundle; sourceTree = "<group>"; };
+		16E834AB1E6FEADD00106A8D /* EmoticonTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonTools.swift; sourceTree = "<group>"; };
+		16EAE18B1E77D90600115BEC /* HomeNomalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNomalCell.swift; sourceTree = "<group>"; };
+		16EAE18D1E77D92100115BEC /* HomePicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePicCell.swift; sourceTree = "<group>"; };
+		16EAE18F1E77D96400115BEC /* HomeRetweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRetweetCell.swift; sourceTree = "<group>"; };
+		16EAE1911E77D96F00115BEC /* HomeRetweetPicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRetweetPicCell.swift; sourceTree = "<group>"; };
+		16EAE1931E77DAD100115BEC /* WBStatusTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusTitleView.swift; sourceTree = "<group>"; };
 		16EB54081E5155FA0090F7A9 /* PersonalInfoCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoCenter.swift; sourceTree = "<group>"; };
 		16EB540A1E51567B0090F7A9 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		16EB540C1E5192050090F7A9 /* URLMacro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLMacro.swift; sourceTree = "<group>"; };
@@ -339,6 +359,12 @@
 			children = (
 				1601463C1E52E662000A7202 /* HomeTableView.swift */,
 				1601463E1E52ED10000A7202 /* HomeTableViewCell.swift */,
+				16EAE18B1E77D90600115BEC /* HomeNomalCell.swift */,
+				16EAE18D1E77D92100115BEC /* HomePicCell.swift */,
+				16EAE18F1E77D96400115BEC /* HomeRetweetCell.swift */,
+				16EAE1911E77D96F00115BEC /* HomeRetweetPicCell.swift */,
+				16EAE1931E77DAD100115BEC /* WBStatusTitleView.swift */,
+				1602B1F21E78D73D00BEBB4B /* WBPicsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -499,6 +525,7 @@
 			children = (
 				163FDA6C1E4C636200DC33B8 /* Common.swift */,
 				16F0899A1E5A83FA0059A875 /* ZhouDateTools.swift */,
+				1602226F1E6E97C800761017 /* ZhouRegularExpressionsTools.swift */,
 				16F18CFA1E4DAB5300DF7A9D /* weibo_Zhou.swift-Bridging-Header.h */,
 			);
 			path = Tools;
@@ -507,6 +534,9 @@
 		163FDA6B1E4C61C000DC33B8 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				16E834A91E6FEA8700106A8D /* EmoticonQQ.bundle */,
+				16E834A71E6FEA7D00106A8D /* EmoticonWeibo.bundle */,
+				16E834AB1E6FEADD00106A8D /* EmoticonTools.swift */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -652,8 +682,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16E834A81E6FEA7D00106A8D /* EmoticonWeibo.bundle in Resources */,
 				1606ED4E1E45A50000347CBD /* LaunchScreen.storyboard in Resources */,
 				1606ED4B1E45A50000347CBD /* Assets.xcassets in Resources */,
+				16E834AA1E6FEA8700106A8D /* EmoticonQQ.bundle in Resources */,
 				1606ED491E45A50000347CBD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -817,6 +849,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				160222701E6E97C800761017 /* ZhouRegularExpressionsTools.swift in Sources */,
 				16EB54121E519FF80090F7A9 /* HomeViewModel.swift in Sources */,
 				163FDA751E4C64B200DC33B8 /* BaseTableViewController.swift in Sources */,
 				163FDA7F1E4C688800DC33B8 /* MeViewController.swift in Sources */,
@@ -824,8 +857,11 @@
 				1601463B1E52A34A000A7202 /* HomeModel.swift in Sources */,
 				16F18C8C1E4D5BF700DF7A9D /* BaseTabBar.swift in Sources */,
 				1601463D1E52E662000A7202 /* HomeTableView.swift in Sources */,
+				16EAE1941E77DAD100115BEC /* WBStatusTitleView.swift in Sources */,
+				16EAE1921E77D96F00115BEC /* HomeRetweetPicCell.swift in Sources */,
 				16EB54141E51A08D0090F7A9 /* BaseViewModel.swift in Sources */,
 				16EB540F1E5193F60090F7A9 /* NetWorkTool.swift in Sources */,
+				16E834AC1E6FEADD00106A8D /* EmoticonTools.swift in Sources */,
 				1601463F1E52ED10000A7202 /* HomeTableViewCell.swift in Sources */,
 				16ED1E251E53ED0E007342F8 /* HomeStatusLayout.swift in Sources */,
 				16EB54091E5155FA0090F7A9 /* PersonalInfoCenter.swift in Sources */,
@@ -834,9 +870,13 @@
 				163FDA711E4C647A00DC33B8 /* BaseNavigationController.swift in Sources */,
 				163FDA6D1E4C636200DC33B8 /* Common.swift in Sources */,
 				1606ED441E45A50000347CBD /* AppDelegate.swift in Sources */,
+				16EAE18E1E77D92100115BEC /* HomePicCell.swift in Sources */,
 				16EB540D1E5192050090F7A9 /* URLMacro.swift in Sources */,
+				16EAE1901E77D96400115BEC /* HomeRetweetCell.swift in Sources */,
 				163FDA7D1E4C687D00DC33B8 /* FindViewController.swift in Sources */,
+				1602B1F31E78D73D00BEBB4B /* WBPicsView.swift in Sources */,
 				163FDA771E4C684900DC33B8 /* HomeViewController.swift in Sources */,
+				16EAE18C1E77D90600115BEC /* HomeNomalCell.swift in Sources */,
 				163FDA6F1E4C645E00DC33B8 /* BaseTabBarController.swift in Sources */,
 				163FDA791E4C685700DC33B8 /* NewsViewController.swift in Sources */,
 				163FDA7B1E4C686600DC33B8 /* PublishViewController.swift in Sources */,

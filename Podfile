@@ -7,13 +7,15 @@ target 'weibo_Zhou.swift' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   pod 'Alamofire'
-  pod 'SwiftyJSON'
   pod 'YYModel'
   pod 'YYCategories'
   pod 'YYText'
-  pod 'SDWebImage'
-  pod 'MJRefresh'
+#   pod 'SDWebImage'
+  pod 'Kingfisher'
+#   pod 'MJRefresh'
+  pod 'SwiftyJSON'
   pod 'ReactiveCocoa', '~> 5.0.0'
+  pod 'SnapKit'
   pod "WeiboSDK", :git => "https://github.com/sinaweibosdk/weibo_ios_sdk.git" 
   # Pods for weibo_Zhou.swift
 

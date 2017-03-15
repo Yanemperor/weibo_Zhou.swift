@@ -71,6 +71,7 @@ class UserModel: NSObject {
 }
 
 class HomeModel: NSObject {
+    var retweeted_status: HomeModel?
     var favorited: Bool = false                //受欢迎的
     var created_at: String?
     var id: Int = 0
@@ -78,7 +79,7 @@ class HomeModel: NSObject {
     var in_reply_to_screen_name: String?
     var isLongText: Bool = false
     var is_show_bulletin: Int = 0
-    var pic_urls: Array<Any>?
+    var pic_urls: Array<Dictionary<String, Any>>?
     var text: String?
     var idstr:String?
     var gif_ids: String?

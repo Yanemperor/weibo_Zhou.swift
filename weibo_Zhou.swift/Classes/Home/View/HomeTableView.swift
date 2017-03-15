@@ -21,11 +21,6 @@ class HomeTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let homeStatusLayout: HomeStatusLayout = homeStatusLayoutArray[indexPath.row] as! HomeStatusLayout
-        return homeStatusLayout.height
-    }
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if homeViewModel != nil {
             return (homeViewModel?.dataArray.count)!
@@ -35,9 +30,25 @@ class HomeTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: HomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as! HomeTableViewCell
-        cell.homeStatusLayout = homeStatusLayoutArray[indexPath.row] as? HomeStatusLayout
-        return cell
+        let homeStatusLayout: HomeStatusLayout = homeStatusLayoutArray[indexPath.row] as! HomeStatusLayout
+        if homeStatusLayout.statusCellType == .WBStatusCellNomal {
+            let cell: HomeNomalCell = tableView.dequeueReusableCell(withIdentifier: "HomeNomalCell", for: indexPath) as! HomeNomalCell
+            cell.homeStatusLayout = homeStatusLayout
+            return cell
+        }else if (homeStatusLayout.statusCellType == .WBStatusCellPic) {
+            let cell: HomePicCell = tableView.dequeueReusableCell(withIdentifier: "HomePicCell", for: indexPath) as! HomePicCell
+            cell.homeStatusLayout = homeStatusLayout
+            return cell
+        }else if (homeStatusLayout.statusCellType == .WBStatusCellRetweet) {
+            let cell: HomeRetweetCell = tableView.dequeueReusableCell(withIdentifier: "HomeRetweetCell", for: indexPath) as! HomeRetweetCell
+            cell.homeStatusLayout = homeStatusLayout
+            return cell
+        }else{
+            let cell: HomeRetweetPicCell = tableView.dequeueReusableCell(withIdentifier: "HomeRetweetPicCell", for: indexPath) as! HomeRetweetPicCell
+            cell.homeStatusLayout = homeStatusLayout
+            return cell
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -49,9 +60,14 @@ class HomeTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
         self.delegate = self
         self.dataSource = self
         self.separatorStyle = .none
+        self.rowHeight = UITableViewAutomaticDimension
+        self.estimatedRowHeight = 200
 //        self.tableHeaderView = UIView(frame: CGRect.zero)
         self.tableFooterView = UIView(frame: CGRect.zero)
-        self.register(HomeTableViewCell.classForCoder(), forCellReuseIdentifier: "HomeTableViewCell")
+        self.register(HomeNomalCell.classForCoder(), forCellReuseIdentifier: "HomeNomalCell")
+        self.register(HomePicCell.classForCoder(), forCellReuseIdentifier: "HomePicCell")
+        self.register(HomeRetweetCell.classForCoder(), forCellReuseIdentifier: "HomeRetweetCell")
+        self.register(HomeRetweetPicCell.classForCoder(), forCellReuseIdentifier: "HomeRetweetPicCell")
         return
     }
     

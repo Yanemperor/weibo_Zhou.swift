@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import YYText
 import YYCategories
 
 public let kWBCellTopMargin: CGFloat = 8.0                 //cell 顶部灰色空白
-public let kWBCellTitleHeight: CGFloat = 0.0              // cell 标题高度 (例如"仅自己可见") 36
+public let kWBCellTitleHeight: CGFloat = 55.0              // cell 标题高度 (例如"仅自己可见") 36
 public let kWBCellPadding: CGFloat = 12.0                  // cell 内边距
 public let kWBCellPaddingText: CGFloat = 10.0              // cell 文本与其他元素间留白
 public let kWBCellPaddingPic: CGFloat = 4.0                // cell 多张图片中间留白
@@ -90,10 +91,31 @@ enum WBStatusTagType {
     case WBStatusTagTypePlace    ///< 地点
 }
 
+/// 微博类型, 这里我分4种类型
+enum WBStatusCellType {
+    case WBStatusCellNomal       ///< 有文字
+    case WBStatusCellPic         ///< 有文字有图片
+    case WBStatusCellRetweet     ///< 有文字有转发文字
+    case WBStatusCellRetweetPic  ///< 有文字有转发文字有图片
+}
+
 class HomeStatusLayout: NSObject {
     //数据
     var homeModel: HomeModel? {
         didSet {
+            if (homeModel?.retweeted_status != nil) {
+                if (homeModel?.retweeted_status?.pic_urls?.count)! > 0 {
+                    statusCellType = WBStatusCellType.WBStatusCellRetweetPic
+                }else{
+                    statusCellType = WBStatusCellType.WBStatusCellRetweet
+                }
+            }else{
+                if (homeModel?.pic_urls?.count)! > 0 {
+                    statusCellType = WBStatusCellType.WBStatusCellPic
+                }else{
+                    statusCellType = WBStatusCellType.WBStatusCellNomal
+                }
+            }
             if homeModel?.user?.cardid != nil {
                 vipBackgroundImageURL = "http://img.t.sinajs.cn/t6/skin/public/feed_cover/" + (homeModel?.user?.cardid)! + "_os7.png?version=2015080302"
                 //判断是不是vip
@@ -106,12 +128,9 @@ class HomeStatusLayout: NSObject {
             }
             if homeModel?.user?.avatar_hd != nil {
                 headViewURL = URL(string: (homeModel?.user?.avatar_hd)!)
-                titleHeight += (40 + 15)
             }
             
-            let verified: Int = (homeModel?.user?.verified_type)!
-            
-            
+            let verified: Int = (homeModel?.user?.verified_type)!            
             switch verified {
             case 220:
                 userVerifyType = WBUserVerifyType.WBUserVerifyTypeClub
@@ -122,7 +141,6 @@ class HomeStatusLayout: NSObject {
             default:
                 userVerifyType = WBUserVerifyType.WBUserVerifyTypeNone
             }
-            
             
             nameTextLayout = (homeModel?.user?.name)!
             
@@ -144,10 +162,61 @@ class HomeStatusLayout: NSObject {
                     }
                 }
             }
+            
+            //文本处理
+            let text: String = (homeModel?.text)!
+            
+            
+            /// 先处理全文
+            textLayout = self.dealText(textString: text)
+//            let size: CGSize = CGSize(width: kScreenWidth - 12 * 2, height: CGFloat.greatestFiniteMagnitude)
+//            let layout: YYTextLayout = YYTextLayout.init(containerSize: size, text: textLayout!)!
+//            textSize = CGSize(width: layout.textBoundingSize.width, height: layout.textBoundingSize.height)
+//            textHeight = textSize.height
+            
+            /// 处理图片 微博图片规则, 一张图片
+            picArray.removeAllObjects()
+            if homeModel?.pic_urls != nil {
+                for item in (homeModel?.pic_urls)! {
+                    picArray.add(item["thumbnail_pic"]!)
+                }
+            }
+            if picArray.count > 0 {
+                isHavePic = true
+                showPic = homeModel?.original_pic!
+                let smallPicWidth: CGFloat = (kScreenWidth - 2 * (kWBCellPaddingPic + kWBCellPadding)) / 3.0
+                let smallPicHeight: CGFloat = smallPicWidth
+                
+                switch picArray.count {
+                case 1:
+                    let imageView: UIImageView = UIImageView()
+                    imageView.kf.setImage(with: URL.init(string: picArray[0] as! String), completionHandler: { (image, error, type, url) in
+                        self.picSize = image?.size
+                        self.picHeight = (self.picSize?.height)!
+                    })
+                case 2,3:
+                    picSize = CGSize(width: kScreenWidth, height: smallPicHeight + kWBCellPaddingText)
+                    picHeight = (picSize?.height)!
+                case 4,5,6:
+                    picSize = CGSize(width: kScreenWidth, height: smallPicHeight * 2 + kWBCellPaddingText + kWBCellPaddingPic)
+                    picHeight = (picSize?.height)!
+                case 7,8,9:
+                    picSize = CGSize(width: kScreenWidth, height: smallPicHeight * 3 + kWBCellPaddingText + kWBCellPaddingPic * 2)
+                    picHeight = (picSize?.height)!
+                default:
+                    return
+                }
+            }else{
+                isHavePic = false
+            }
         }
     }
     
     // MARK: - 布局结果
+    //cell类型
+    var statusCellType: WBStatusCellType?   //cell类型
+    
+    
     //顶部留白
     var marginTop = kWBCellTopMargin        //顶部灰色留白
     
@@ -166,12 +235,25 @@ class HomeStatusLayout: NSObject {
     var userVerifyType: WBUserVerifyType?   //认证方式
     
     //文本
-    var textHeight: CGFloat?                //文本高度(包括下方留白)
-    var textLayoout = ""                    //文本
+    var textHeight: CGFloat = 0             //文本高度(包括下方留白)
+    var textSize: CGSize = CGSize.zero
+    var textLayout: NSMutableAttributedString?         //文本
+    var statusHeight: CGFloat {
+        return textHeight
+    }
+    var textURLString: String = ""
+
     
     //图片
-    var picHeight: CGFloat?                 //图片高度, 0为没图片
+    var picHeight: CGFloat = 0                 //图片高度, 0为没图片
     var picSize: CGSize?
+    lazy var picArray: NSMutableArray = {
+        let temp: NSMutableArray = NSMutableArray()
+        return temp
+    }()
+    var isHavePic: Bool = false
+    var showPic: String?
+    
     
     //转发
     var retweetHeight: CGFloat?             //转发高度, 0为没转发
@@ -209,8 +291,100 @@ class HomeStatusLayout: NSObject {
     
     //总高度
     var height: CGFloat {
-        return self.marginTop + titleHeight
+        return self.marginTop + titleHeight + kWBCellPaddingText + statusHeight
     }
+    
+    
+    
+    
+    
+    
+    func dealText(textString: String) -> NSMutableAttributedString {
+        var text: String = textString
+        var isFullText: Bool = false
+        if text.contains("全文") {
+            let textTemp1: Array = text.components(separatedBy: "全文")
+            text = textTemp1[0]
+            let textTemp2: Array = textTemp1[1].components(separatedBy: " ")
+            self.textURLString = textTemp2[1]
+            isFullText = true
+        }
+        
+        /// #话题#, URL链接, @
+        //    NSString *user = [str firstMatch:RX(@"@[-_a-zA-Z0-9\u4E00-\u9FA5]+")];      //@用户
+        //    NSString *http = [str firstMatch:RX(@"http(s)?://([A-Za-z0-9._-]+(/)?)*")]; //http
+        //    NSString *topic = [str firstMatch:RX(@"#[^@#]+?#")];                           //话题
+        //    NSString *emotions = [str firstMatch:RX(@"\\[[^ \\[\\]]+?\\]")];
+        
+        let regularExpressions = ZhouRegularExpressionsTools()
+        let httpArray: NSArray = regularExpressions.matchingHTTP(text: text)
+        if httpArray.count > 0 {
+            var tempText: NSString = NSString.init(string: text)
+            for item in httpArray.reversed() {
+                tempText = tempText.replacingCharacters(in: item as! NSRange, with: "网页链接") as NSString
+            }
+            text = tempText as String
+        }
+        let attachment: NSMutableAttributedString = NSMutableAttributedString(string: text)
+        let font: UIFont = UIFont.systemFont(ofSize: CGFloat(kWBCellTextFontSize))
+        attachment.addAttribute(NSFontAttributeName, value: font, range: NSMakeRange(0, attachment.length))
+        let color: UIColor = kWBCellTextNormalColor!
+        attachment.addAttribute(NSForegroundColorAttributeName, value: color, range: NSMakeRange(0, attachment.length))
+        if isFullText {
+            let fullText: NSAttributedString = NSAttributedString(string: "全文", attributes: [NSForegroundColorAttributeName : kWBCellTextHighlightColor!, NSFontAttributeName : UIFont.boldSystemFont(ofSize: CGFloat(kWBCellTextFontSize))])
+            attachment.append(fullText)
+        }
+        let userNameArray: NSArray = regularExpressions.matchingUserName(text: text)
+        if userNameArray.count > 0{
+            for item in userNameArray {
+                attachment.addAttribute(NSForegroundColorAttributeName, value: kWBCellTextHighlightColor!, range: item as! NSRange)
+            }
+        }
+        let topicArray: NSArray = regularExpressions.matchingTopic(text: text)
+        if topicArray.count > 0 {
+            for item in topicArray {
+                attachment.addAttribute(NSForegroundColorAttributeName, value: kWBCellTextHighlightColor!, range: item as! NSRange)
+            }
+        }
+        if httpArray.count > 0 {
+            for _ in httpArray {
+                let temp: NSRange = NSString.init(string: text) .range(of: "网页链接")
+                attachment.addAttribute(NSForegroundColorAttributeName, value: kWBCellTextHighlightColor!, range: temp)
+            }
+        }
+        
+        let emoticon: EmoticonTools = EmoticonTools.sharedInstance
+        emoticon.getEmoticon()
+        // 匹配表情
+        //创建匹配正则表达式的类型描述模板
+        let pattern: String = "\\[[a-zA-Z0-9\\u4e00-\\u9fa5]+\\]"
+        //创建匹配对象
+        let regulareExpression: NSRegularExpression = try! NSRegularExpression.init(pattern: pattern, options: .caseInsensitive)
+        let matches: NSArray = regulareExpression.matches(in: text, options: .reportCompletion, range: NSMakeRange(0, text.characters.count)) as NSArray
+        let textStr: NSString = NSString.init(string: text)
+        if matches.count > 0 {
+            for item in matches.reversed() {
+                let match: NSTextCheckingResult = item as! NSTextCheckingResult
+                let range: NSRange = match.range
+                let mStr: String = textStr.substring(with: NSMakeRange(range.location + 1, range.length - 2))
+                let key: String = "/" + mStr
+                let value: String? = emoticon.dataDic.object(forKey: key) as! String?
+                if value != nil {
+                    //                        print(value!)
+                    let image: UIImage = UIImage.init(contentsOfFile: (emoticon.imagePath! + "/" + value! + "@2x.png"))!
+                    let imgAttributedStr: NSMutableAttributedString = NSMutableAttributedString.yy_attachmentString(withEmojiImage: image, fontSize: 18)!
+                    attachment.replaceCharacters(in: range, with: imgAttributedStr)
+                }
+            }
+        }
+        return attachment
+    }
+    
+    lazy var textLabel: UILabel = {
+        let temp: UILabel = UILabel()
+        temp.numberOfLines = 0
+        return temp
+    }()
     
 }
 
