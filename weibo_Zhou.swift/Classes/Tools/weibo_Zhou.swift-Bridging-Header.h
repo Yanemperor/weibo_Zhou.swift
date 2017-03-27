@@ -9,6 +9,6 @@
 #ifndef weibo_Zhou_swift_Bridging_Header_h
 #define weibo_Zhou_swift_Bridging_Header_h
 
-#import "WeiboSDK.h"
-
+//#import "WeiboSDK.h"
+//#import "UITableView+FDTemplateLayoutCell.h"
 #endif /* weibo_Zhou_swift_Bridging_Header_h */

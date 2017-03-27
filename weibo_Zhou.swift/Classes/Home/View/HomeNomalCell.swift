@@ -51,12 +51,15 @@ class HomeNomalCell: UITableViewCell {
     
     lazy var titleView: WBStatusTitleView = {
         let temp: WBStatusTitleView = WBStatusTitleView.init(frame: .init(x: 0, y: self.margin.bottom, width: kScreenWidth, height: 0))
+        temp.backgroundColor = UIColor.white
         return temp
     }()
     
     lazy var textLabels: UILabel = {
         let temp: UILabel = UILabel()
+        temp.backgroundColor = UIColor.white
         temp.numberOfLines = 0
+        temp.layer.masksToBounds = true
         return temp
     }()
     

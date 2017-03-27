@@ -16,11 +16,17 @@ class HomeViewModel: BaseViewModel {
             print(JSON.init(request))
             guard let dict = request as? [String : Any] else { return }
             guard let array = dict["statuses"] as? [[String : Any]] else { return }
-            for dic in array {
-                let model = HomeModel.yy_model(withJSON: dic)
-                self.dataArray.add(model as Any)
+            DispatchQueue.global().async {
+                for dic in array {
+                    let model = HomeModel.yy_model(withJSON: dic)
+                    let homeStatusLayout: HomeStatusLayout = HomeStatusLayout()
+                    homeStatusLayout.homeModel = model
+                    self.dataArray.add(homeStatusLayout as Any)
+                }
+                DispatchQueue.main.async {
+                    finishedCallback()
+                }
             }
-            finishedCallback()
         }
     }
 }

@@ -15,7 +15,6 @@ class WBStatusTitleView: UIView {
             if homeStatusLayout?.vipBackgroundImageURL != nil {
                 self.addSubview(vipBackgroundView)
                 let vipUrl: URL = URL(string: (homeStatusLayout?.vipBackgroundImageURL)!)!
-                //                vipBackgroundView.sd_setImage(with: vipUrl)
                 vipBackgroundView.kf.setImage(with: vipUrl)
                 if (homeStatusLayout?.mbrank)! > 0 {
                     if (homeStatusLayout?.isVIP)! {
@@ -106,7 +105,7 @@ class WBStatusTitleView: UIView {
         timeline.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(5)
             make.right.equalToSuperview().offset(-5)
-            make.size.equalTo(CGSize(width: 30, height: 30))
+            make.size.equalTo(CGSize(width: 15, height: 15))
         }
     }
     
@@ -119,30 +118,42 @@ class WBStatusTitleView: UIView {
     lazy var headView: UIImageView = {
         let temp: UIImageView = UIImageView()
         temp.backgroundColor = UIColor.white
+        temp.isOpaque = true
         return temp
     }()
     
-    lazy var avatarBadgeView = UIImageView()
+    lazy var avatarBadgeView: UIImageView = {
+        let temp: UIImageView = UIImageView()
+        temp.backgroundColor = UIColor.white
+        temp.isOpaque = true
+        return temp
+    }()
     
     lazy var nameLabel: UILabel = {
         let temp: UILabel = UILabel()
+        temp.backgroundColor = UIColor.white
         temp.textColor = UIColor.orange
         temp.textAlignment = NSTextAlignment.left
         temp.font = UIFont.systemFont(ofSize: 18.0)
+        temp.layer.masksToBounds = true
         return temp
     }()
     
     lazy var sourceLabel: UILabel = {
         let temp: UILabel = UILabel()
+        temp.backgroundColor = UIColor.white
         temp.textColor = kWBCellTimeNormalColor
         temp.textAlignment = NSTextAlignment.left
         temp.font = UIFont.systemFont(ofSize: CGFloat(kWBCellSourceFontSize))
+        temp.layer.masksToBounds = true
         return temp
     }()
     
     lazy var timeline: UIButton = {
         let temp: UIButton = UIButton()
+        temp.backgroundColor = UIColor.white
         temp.isExclusiveTouch = true
+        temp.isOpaque = true
         temp.setImage(kImage(imageName: "timeline_icon_more"), for: .normal)
         temp.setImage(kImage(imageName: "timeline_icon_more_highlighted"), for: .highlighted)
         temp.addTarget(self, action: #selector(timelineClick), for: .touchUpInside)

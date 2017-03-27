@@ -166,13 +166,8 @@ class HomeStatusLayout: NSObject {
             //文本处理
             let text: String = (homeModel?.text)!
             
-            
             /// 先处理全文
             textLayout = self.dealText(textString: text)
-//            let size: CGSize = CGSize(width: kScreenWidth - 12 * 2, height: CGFloat.greatestFiniteMagnitude)
-//            let layout: YYTextLayout = YYTextLayout.init(containerSize: size, text: textLayout!)!
-//            textSize = CGSize(width: layout.textBoundingSize.width, height: layout.textBoundingSize.height)
-//            textHeight = textSize.height
             
             /// 处理图片 微博图片规则, 一张图片
             picArray.removeAllObjects()
@@ -189,11 +184,8 @@ class HomeStatusLayout: NSObject {
                 
                 switch picArray.count {
                 case 1:
-                    let imageView: UIImageView = UIImageView()
-                    imageView.kf.setImage(with: URL.init(string: picArray[0] as! String), completionHandler: { (image, error, type, url) in
-                        self.picSize = image?.size
-                        self.picHeight = (self.picSize?.height)!
-                    })
+                    picSize = CGSize(width: (kScreenWidth - 2 * kWBCellPadding) * 2 / 3, height: (kScreenWidth - 2 * kWBCellPadding) * 2 / 3)
+                    picHeight = (picSize?.height)!
                 case 2,3:
                     picSize = CGSize(width: kScreenWidth, height: smallPicHeight + kWBCellPaddingText)
                     picHeight = (picSize?.height)!
@@ -209,7 +201,22 @@ class HomeStatusLayout: NSObject {
             }else{
                 isHavePic = false
             }
+            updateRowHeight()
+ 
         }
+    }
+    
+    //计算cell高度
+    func updateRowHeight() {
+        var height = marginTop + titleHeight + kWBCellPaddingText
+        let textSize: CGSize = CGSize(width: kScreenWidth - 12 * 2, height: CGFloat(MAXFLOAT))
+        if let text = textLayout {
+            height += text.boundingRect(with: textSize, options: [.usesLineFragmentOrigin], context: nil).height + 10
+        }
+        if self.picArray.count > 0 {
+            height += picHeight
+        }
+        self.height = height
     }
     
     // MARK: - 布局结果
@@ -290,9 +297,7 @@ class HomeStatusLayout: NSObject {
     var marginBottom: CGFloat?
     
     //总高度
-    var height: CGFloat {
-        return self.marginTop + titleHeight + kWBCellPaddingText + statusHeight
-    }
+    var height: CGFloat?
     
     
     
@@ -306,7 +311,9 @@ class HomeStatusLayout: NSObject {
             let textTemp1: Array = text.components(separatedBy: "全文")
             text = textTemp1[0]
             let textTemp2: Array = textTemp1[1].components(separatedBy: " ")
-            self.textURLString = textTemp2[1]
+            if textTemp2.count > 1 {
+                self.textURLString = textTemp2[1]
+            }
             isFullText = true
         }
         
@@ -370,10 +377,13 @@ class HomeStatusLayout: NSObject {
                 let key: String = "/" + mStr
                 let value: String? = emoticon.dataDic.object(forKey: key) as! String?
                 if value != nil {
-                    //                        print(value!)
                     let image: UIImage = UIImage.init(contentsOfFile: (emoticon.imagePath! + "/" + value! + "@2x.png"))!
-                    let imgAttributedStr: NSMutableAttributedString = NSMutableAttributedString.yy_attachmentString(withEmojiImage: image, fontSize: 18)!
-                    attachment.replaceCharacters(in: range, with: imgAttributedStr)
+//                    let imgAttributedStr: NSMutableAttributedString = NSMutableAttributedString.yy_attachmentString(withEmojiImage: image, fontSize: 18)!
+                    let imgAttributedStr = NSTextAttachment()
+                    imgAttributedStr.image = image
+                    imgAttributedStr.bounds = CGRect(x: 0, y: -3, width: 18, height: 18)
+                    let imageStr = NSAttributedString(attachment: imgAttributedStr)
+                    attachment.replaceCharacters(in: range, with: imageStr)
                 }
             }
         }
@@ -389,5 +399,20 @@ class HomeStatusLayout: NSObject {
 }
 
 
-
+extension String {
+    //    constrainedToSize 如果一行，用CGSizeZero，否则用CGSizeMake(你想要的宽度, CGFloat(MAXFLOAT)
+    func textSizeWithFont(font: UIFont, constrainedToSize size:CGSize) -> CGSize {
+        var textSize:CGSize!
+        if size.equalTo(CGSize.zero) {
+            let attributes = NSDictionary(object: font, forKey: NSFontAttributeName as NSCopying)
+            textSize = self.size(attributes: attributes as? [String : AnyObject])
+        } else {
+            let option = NSStringDrawingOptions.usesLineFragmentOrigin
+            let attributes = NSDictionary(object: font, forKey: NSFontAttributeName as NSCopying)
+            let stringRect = self.boundingRect(with: size, options: option, attributes: attributes as? [String : AnyObject], context: nil)
+            textSize = stringRect.size
+        }
+        return textSize
+    }
+}
 

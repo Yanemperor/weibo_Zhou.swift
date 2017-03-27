@@ -7,17 +7,16 @@
 //
 
 import UIKit
-
+import SnapKit
 class HomePicCell: UITableViewCell {
-
     var homeStatusLayout: HomeStatusLayout? {
         didSet {
             if homeStatusLayout != nil {
                 titleView.homeStatusLayout = homeStatusLayout
                 textLabels.attributedText = homeStatusLayout?.textLayout
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: { 
-                    self.picsView.homeStatusLayout = self.homeStatusLayout
-                })
+                if (homeStatusLayout?.picArray.count)! > 0 {
+                    picsView.homeStatusLayout = homeStatusLayout
+                }
             }
         }
     }
@@ -41,12 +40,15 @@ class HomePicCell: UITableViewCell {
             make.top.equalTo(self.titleView.snp.bottom).offset(10)
             make.left.equalToSuperview().offset(12)
             make.right.equalToSuperview().offset(-12)
+//            make.bottom.equalToSuperview()
         }
         picsView.snp.makeConstraints({ (make) in
             make.top.equalTo(self.textLabels.snp.bottom).offset(10)
             make.left.right.bottom.equalToSuperview()
         })
     }
+    
+    var sizeConstraint: Constraint?
     
     // MARK: - 懒加载
     //最上面的灰边
@@ -58,12 +60,15 @@ class HomePicCell: UITableViewCell {
     
     lazy var titleView: WBStatusTitleView = {
         let temp: WBStatusTitleView = WBStatusTitleView.init(frame: .init(x: 0, y: self.margin.bottom, width: kScreenWidth, height: 0))
+        temp.backgroundColor = UIColor.white
         return temp
     }()
     
     lazy var textLabels: UILabel = {
         let temp: UILabel = UILabel()
+        temp.backgroundColor = UIColor.white
         temp.numberOfLines = 0
+        temp.layer.masksToBounds = true
         return temp
     }()
     

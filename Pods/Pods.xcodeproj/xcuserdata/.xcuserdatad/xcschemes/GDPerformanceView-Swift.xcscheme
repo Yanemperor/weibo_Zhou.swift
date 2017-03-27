@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'F35271024AAAD9CBBF396CBEEDD50DFF'
-               BlueprintName = 'YYModel'
+               BlueprintIdentifier = 'EFAE7C86FD6E80EBB3F47DB74FC97A6A'
+               BlueprintName = 'GDPerformanceView-Swift'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'YYModel.framework'>
+               BuildableName = 'GDPerformanceView-Swift.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

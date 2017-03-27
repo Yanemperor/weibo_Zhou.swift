@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import GDPerformanceView_Swift
 class HomeViewController: BaseViewController {
 
     override func viewDidLoad() {
@@ -23,6 +23,13 @@ class HomeViewController: BaseViewController {
         homeViewModel.requestData { 
             self.homeTableView.homeViewModel = self.homeViewModel
             self.homeTableView.reloadData()
+        }
+        
+        self.performanceMoniter.startMonitoring()
+        self.performanceMoniter.configure { (textLabel) in
+            textLabel?.backgroundColor = UIColor.black
+            textLabel?.textColor = UIColor.white
+            textLabel?.layer.borderColor = UIColor.black.cgColor
         }
     }
     
@@ -48,6 +55,7 @@ class HomeViewController: BaseViewController {
         return temp
     }()
     
+    lazy var performanceMoniter = GDPerformanceMonitor()
     
 
     

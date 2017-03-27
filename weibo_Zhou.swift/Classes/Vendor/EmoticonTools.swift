@@ -21,6 +21,10 @@ class EmoticonTools: NSObject {
     var imagePath: String?
     
     func getEmoticon() {
+        if dataDic.count > 0 {
+            return
+        }
+        
         let emoticonBundlePath = Bundle.main.path(forResource: "EmoticonQQ", ofType: "bundle")
         imagePath = emoticonBundlePath
         let bundle = Bundle(path: emoticonBundlePath!)
@@ -31,7 +35,9 @@ class EmoticonTools: NSObject {
         for dic in array! {
             let tempDic: NSDictionary = dic as! NSDictionary
             let keyArray = tempDic.allKeys
-            dataDic.setValue(tempDic[keyArray[0]], forKey: keyArray[0] as! String)
+            if keyArray.count > 0 {
+                dataDic.setValue(tempDic[keyArray[0]], forKey: keyArray[0] as! String)
+            }
         }
     }
 }

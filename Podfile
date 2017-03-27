@@ -14,9 +14,11 @@ target 'weibo_Zhou.swift' do
   pod 'Kingfisher'
 #   pod 'MJRefresh'
   pod 'SwiftyJSON'
-  pod 'ReactiveCocoa', '~> 5.0.0'
+#   pod 'ReactiveCocoa', '~> 5.0.0'
   pod 'SnapKit'
-  pod "WeiboSDK", :git => "https://github.com/sinaweibosdk/weibo_ios_sdk.git" 
+#   pod "WeiboSDK", :git => "https://github.com/sinaweibosdk/weibo_ios_sdk.git" 
+  pod 'GDPerformanceView-Swift', '~> 1.1.2'
+#   pod "UITableView+FDTemplateLayoutCell" 
   # Pods for weibo_Zhou.swift
 
   target 'weibo_Zhou.swiftTests' do

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import YYCategories
-import ReactiveCocoa
+//import ReactiveCocoa
 import Kingfisher
 import SwiftyJSON
 import SnapKit
@@ -22,7 +22,7 @@ public let kAppRedirectURI = "https://api.weibo.com/oauth2/default.html"
 
 //宏定义
 public let kUserDefaults = UserDefaults.standard
-public let kWBToken = "2.00KDEKPGyY87OC3675a0c38akkQrHE"
+public let kWBToken = "2.00KDEKPGyY87OCf3cd56356di5ehjD"
 public let kWBUserID = "uid"
 public let kWBRefreshToken = "wbRefreshToken"
 public var kisLogin = UserData.shared.isLongin

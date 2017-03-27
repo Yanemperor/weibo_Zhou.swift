@@ -31,6 +31,7 @@ class MeViewController: BaseViewController {
     
     
     // MARK: - private methods(内部接口)
+    /*
     func loginBtnClick() {
         let request: WBAuthorizeRequest = WBAuthorizeRequest.request() as! WBAuthorizeRequest
         request.redirectURI = kAppRedirectURI
@@ -41,12 +42,12 @@ class MeViewController: BaseViewController {
             "Other_Info_3": ["key1": "obj1", "key2": "obj2"]]
         WeiboSDK.send(request)
     }
-    
+    */
     // MARK: - loading
     
     
     // MARK: - 懒加载
-    
+    /*
     lazy var loginBtn: UIButton = {
         let temp: UIButton = UIButton(type: .custom)
         temp.backgroundColor = UIColor.orange
@@ -55,7 +56,7 @@ class MeViewController: BaseViewController {
         temp.addTarget(self, action: #selector(loginBtnClick), for: .touchUpInside)
         return temp
     }()
-
+*/
     
 
     /*
