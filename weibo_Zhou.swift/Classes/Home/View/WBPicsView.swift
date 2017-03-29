@@ -15,13 +15,14 @@ class WBPicsView: UIView {
             if homeStatusLayout != nil {
                 let picCount = homeStatusLayout?.picArray.count
                 contentView.size = (homeStatusLayout?.picSize)!
+//                self.size = contentView.size
                 setImageHidden(number: picCount!)
                 let smallPicWidth: CGFloat = (kScreenWidth - 2 * (kWBCellPaddingPic + kWBCellPadding)) / 3.0
                 switch picCount! {
                 case 1:
                     let imageView = picArray[1]
                     imageView.isHidden = false
-                    imageView.origin = CGPoint(x: 0, y: 0)
+                    imageView.origin = CGPoint(x: kWBCellPadding, y: 0)
                     imageView.size = contentView.size
                     imageView.kf.setImage(with: URL.init(string: (homeStatusLayout?.showPic)!), completionHandler: { (image, error, type, url) in
                         let imageWidth = imageView.height / (image?.size.height)! * (image?.size.width)!
@@ -34,14 +35,14 @@ class WBPicsView: UIView {
                     for item in 0..<picCount! {
                         let imageView = picArray[item]
                         imageView.size = CGSize(width: smallPicWidth, height: smallPicWidth)
-                        imageView.origin = CGPoint(x: CGFloat(item) * (imageView.width + kWBCellPaddingPic), y: 0)
+                        imageView.origin = CGPoint(x: CGFloat(item) * (imageView.width + kWBCellPaddingPic) + kWBCellPadding, y: 0)
                         imageView.kf.setImage(with: URL.init(string: (homeStatusLayout?.picArray[item]) as! String))
                     }
                 case 4,5,6,7,8,9:
                     for item in 0..<picCount! {
                         let imageView = picArray[item]
                         imageView.size = CGSize(width: smallPicWidth, height: smallPicWidth)
-                        imageView.origin = CGPoint(x: CGFloat(item % 3) * (imageView.width + kWBCellPaddingPic), y: CGFloat(item / 3) * (imageView.width + kWBCellPaddingPic))
+                        imageView.origin = CGPoint(x: CGFloat(item % 3) * (imageView.width + kWBCellPaddingPic) + kWBCellPadding, y: CGFloat(item / 3) * (imageView.width + kWBCellPaddingPic))
                         imageView.kf.setImage(with: URL.init(string: (homeStatusLayout?.picArray[item]) as! String))
                     }
                     
@@ -67,7 +68,7 @@ class WBPicsView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.addSubview(contentView)
-        
+                
         for _ in 0..<9 {
             let imageView: UIImageView = UIImageView()
             imageView.size = CGSize.zero
@@ -99,8 +100,8 @@ class WBPicsView: UIView {
     
     lazy var contentView: UIView = {
         let temp: UIView = UIView()
-        temp.origin = CGPoint(x: kWBCellPadding, y: 0)
-        temp.width = kScreenWidth - 2 * kWBCellPadding
+        temp.origin = CGPoint(x: 0, y: 0)
+        temp.width = kScreenWidth - 2 * (kWBCellPadding + kWBCellPaddingPic)
         temp.height = 1
         temp.backgroundColor = UIColor.white
         return temp

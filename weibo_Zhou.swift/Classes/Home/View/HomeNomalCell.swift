@@ -16,6 +16,7 @@ class HomeNomalCell: UITableViewCell {
                 titleView.homeStatusLayout = homeStatusLayout
                 textLabels.attributedText = homeStatusLayout?.textLayout
             }
+            toolbarView.homeStatusLayout = homeStatusLayout
         }
     }
     
@@ -24,6 +25,7 @@ class HomeNomalCell: UITableViewCell {
         self.contentView.addSubview(margin)
         self.contentView.addSubview(titleView)
         self.contentView.addSubview(textLabels)
+        self.contentView.addSubview(toolbarView)
         margin.snp.makeConstraints { (make) in
             make.left.top.right.equalToSuperview()
             make.height.equalTo(10)
@@ -37,7 +39,11 @@ class HomeNomalCell: UITableViewCell {
             make.top.equalTo(self.titleView.snp.bottom).offset(10)
             make.left.equalToSuperview().offset(12)
             make.right.equalToSuperview().offset(-12)
-            make.bottom.equalToSuperview()
+            make.bottom.equalTo(self.toolbarView.snp.top)
+        }
+        toolbarView.snp.makeConstraints { (make) in
+            make.left.right.bottom.equalToSuperview()
+            make.height.equalTo(kWBCellToolbarHeight)
         }
     }
     
@@ -60,6 +66,12 @@ class HomeNomalCell: UITableViewCell {
         temp.backgroundColor = UIColor.white
         temp.numberOfLines = 0
         temp.layer.masksToBounds = true
+        return temp
+    }()
+    
+    lazy var toolbarView: WBStatusToolbarView = {
+        let temp: WBStatusToolbarView = WBStatusToolbarView.init(frame: .init(x: 0, y: 0, width: kScreenWidth, height: CGFloat(kWBCellToolbarHeight)))
+        temp.backgroundColor = UIColor.white
         return temp
     }()
     

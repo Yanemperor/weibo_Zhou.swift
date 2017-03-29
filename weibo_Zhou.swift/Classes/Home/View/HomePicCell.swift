@@ -17,6 +17,7 @@ class HomePicCell: UITableViewCell {
                 if (homeStatusLayout?.picArray.count)! > 0 {
                     picsView.homeStatusLayout = homeStatusLayout
                 }
+                toolbarView.homeStatusLayout = homeStatusLayout
             }
         }
     }
@@ -27,6 +28,7 @@ class HomePicCell: UITableViewCell {
         self.contentView.addSubview(titleView)
         self.contentView.addSubview(textLabels)
         self.contentView.addSubview(picsView)
+        self.contentView.addSubview(toolbarView)
         margin.snp.makeConstraints { (make) in
             make.left.top.right.equalToSuperview()
             make.height.equalTo(10)
@@ -44,8 +46,14 @@ class HomePicCell: UITableViewCell {
         }
         picsView.snp.makeConstraints({ (make) in
             make.top.equalTo(self.textLabels.snp.bottom).offset(10)
-            make.left.right.bottom.equalToSuperview()
+            make.left.right.equalToSuperview()
+            make.bottom.equalTo(self.toolbarView.top)
         })
+        toolbarView.snp.makeConstraints { (make) in
+//            make.top.equalTo(self.picsView.snp.bottom).offset(5)
+            make.left.right.bottom.equalToSuperview()
+            make.height.equalTo(kWBCellToolbarHeight)
+        }
     }
     
     var sizeConstraint: Constraint?
@@ -73,6 +81,12 @@ class HomePicCell: UITableViewCell {
     }()
     
     lazy var picsView: WBPicsView = WBPicsView()
+    
+    lazy var toolbarView: WBStatusToolbarView = {
+        let temp: WBStatusToolbarView = WBStatusToolbarView.init(frame: .init(x: 0, y: 0, width: kScreenWidth, height: CGFloat(kWBCellToolbarHeight)))
+        temp.backgroundColor = UIColor.white
+        return temp
+    }()
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

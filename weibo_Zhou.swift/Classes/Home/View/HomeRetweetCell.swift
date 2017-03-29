@@ -15,6 +15,8 @@ class HomeRetweetCell: UITableViewCell {
             if homeStatusLayout != nil {
                 titleView.homeStatusLayout = homeStatusLayout
                 textLabels.attributedText = homeStatusLayout?.textLayout
+                retweetLabel.attributedText = homeStatusLayout?.retweetTextLayout
+                toolbarView.homeStatusLayout = homeStatusLayout
             }
         }
     }
@@ -24,6 +26,9 @@ class HomeRetweetCell: UITableViewCell {
         self.contentView.addSubview(margin)
         self.contentView.addSubview(titleView)
         self.contentView.addSubview(textLabels)
+        self.contentView.addSubview(retweetView)
+        retweetView.addSubview(retweetLabel)
+        self.contentView.addSubview(toolbarView)
         margin.snp.makeConstraints { (make) in
             make.left.top.right.equalToSuperview()
             make.height.equalTo(10)
@@ -37,7 +42,21 @@ class HomeRetweetCell: UITableViewCell {
             make.top.equalTo(self.titleView.snp.bottom).offset(10)
             make.left.equalToSuperview().offset(12)
             make.right.equalToSuperview().offset(-12)
+        }
+        retweetView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.textLabels.snp.bottom).offset(10)
+            make.left.right.equalToSuperview()
+            make.bottom.equalTo(self.toolbarView.snp.top).offset(-5)
+        }
+        retweetLabel.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(6)
+            make.left.equalToSuperview().offset(12)
+            make.right.equalToSuperview().offset(-12)
             make.bottom.equalToSuperview()
+        }
+        toolbarView.snp.makeConstraints { (make) in
+            make.left.right.bottom.equalToSuperview()
+            make.height.equalTo(kWBCellToolbarHeight)
         }
     }
     
@@ -60,6 +79,26 @@ class HomeRetweetCell: UITableViewCell {
         temp.backgroundColor = UIColor.white
         temp.numberOfLines = 0
         temp.layer.masksToBounds = true
+        return temp
+    }()
+    
+    lazy var retweetView: UIView = {
+        let temp: UIView = UIView()
+        temp.backgroundColor = kWBCellBackgroundColor
+        return temp
+    }()
+    
+    lazy var retweetLabel: UILabel = {
+        let temp: UILabel = UILabel()
+        temp.backgroundColor = kWBCellBackgroundColor
+        temp.numberOfLines = 0
+        temp.layer.masksToBounds = true
+        return temp
+    }()
+    
+    lazy var toolbarView: WBStatusToolbarView = {
+        let temp: WBStatusToolbarView = WBStatusToolbarView.init(frame: .init(x: 0, y: 0, width: kScreenWidth, height: CGFloat(kWBCellToolbarHeight)))
+        temp.backgroundColor = UIColor.white
         return temp
     }()
     

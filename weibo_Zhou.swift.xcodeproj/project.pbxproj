@@ -10,6 +10,7 @@
 		1601463B1E52A34A000A7202 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601463A1E52A34A000A7202 /* HomeModel.swift */; };
 		1601463D1E52E662000A7202 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601463C1E52E662000A7202 /* HomeTableView.swift */; };
 		1601463F1E52ED10000A7202 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601463E1E52ED10000A7202 /* HomeTableViewCell.swift */; };
+		160214D61E8A443500BD7A35 /* WBStatusToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160214D51E8A443500BD7A35 /* WBStatusToolbarView.swift */; };
 		160222701E6E97C800761017 /* ZhouRegularExpressionsTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1602226F1E6E97C800761017 /* ZhouRegularExpressionsTools.swift */; };
 		1602B1F31E78D73D00BEBB4B /* WBPicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1602B1F21E78D73D00BEBB4B /* WBPicsView.swift */; };
 		1606ED441E45A50000347CBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1606ED431E45A50000347CBD /* AppDelegate.swift */; };
@@ -71,6 +72,7 @@
 		1601463A1E52A34A000A7202 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		1601463C1E52E662000A7202 /* HomeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
 		1601463E1E52ED10000A7202 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		160214D51E8A443500BD7A35 /* WBStatusToolbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusToolbarView.swift; sourceTree = "<group>"; };
 		1602226F1E6E97C800761017 /* ZhouRegularExpressionsTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhouRegularExpressionsTools.swift; sourceTree = "<group>"; };
 		1602B1F21E78D73D00BEBB4B /* WBPicsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBPicsView.swift; sourceTree = "<group>"; };
 		1606ED401E45A50000347CBD /* weibo_Zhou.swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo_Zhou.swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -365,6 +367,7 @@
 				16EAE1911E77D96F00115BEC /* HomeRetweetPicCell.swift */,
 				16EAE1931E77DAD100115BEC /* WBStatusTitleView.swift */,
 				1602B1F21E78D73D00BEBB4B /* WBPicsView.swift */,
+				160214D51E8A443500BD7A35 /* WBStatusToolbarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -880,6 +883,7 @@
 				163FDA6F1E4C645E00DC33B8 /* BaseTabBarController.swift in Sources */,
 				163FDA791E4C685700DC33B8 /* NewsViewController.swift in Sources */,
 				163FDA7B1E4C686600DC33B8 /* PublishViewController.swift in Sources */,
+				160214D61E8A443500BD7A35 /* WBStatusToolbarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

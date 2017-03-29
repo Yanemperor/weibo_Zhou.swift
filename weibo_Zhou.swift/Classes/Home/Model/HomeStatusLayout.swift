@@ -176,33 +176,81 @@ class HomeStatusLayout: NSObject {
                     picArray.add(item["thumbnail_pic"]!)
                 }
             }
+            
+            if homeModel?.retweeted_status?.pic_urls != nil {
+                for item in (homeModel?.retweeted_status?.pic_urls)! {
+                    picArray.add(item["thumbnail_pic"]!)
+                }
+            }
+            
+            
             if picArray.count > 0 {
                 isHavePic = true
-                showPic = homeModel?.original_pic!
-                let smallPicWidth: CGFloat = (kScreenWidth - 2 * (kWBCellPaddingPic + kWBCellPadding)) / 3.0
-                let smallPicHeight: CGFloat = smallPicWidth
-                
-                switch picArray.count {
-                case 1:
-                    picSize = CGSize(width: (kScreenWidth - 2 * kWBCellPadding) * 2 / 3, height: (kScreenWidth - 2 * kWBCellPadding) * 2 / 3)
-                    picHeight = (picSize?.height)!
-                case 2,3:
-                    picSize = CGSize(width: kScreenWidth, height: smallPicHeight + kWBCellPaddingText)
-                    picHeight = (picSize?.height)!
-                case 4,5,6:
-                    picSize = CGSize(width: kScreenWidth, height: smallPicHeight * 2 + kWBCellPaddingText + kWBCellPaddingPic)
-                    picHeight = (picSize?.height)!
-                case 7,8,9:
-                    picSize = CGSize(width: kScreenWidth, height: smallPicHeight * 3 + kWBCellPaddingText + kWBCellPaddingPic * 2)
-                    picHeight = (picSize?.height)!
-                default:
-                    return
+                if let temp = homeModel?.original_pic {
+                    showPic = temp
+                }else if let temp = homeModel?.bmiddle_pic {
+                    showPic = temp
+                }else{
+                    showPic = picArray[0] as? String
                 }
+                upDatePicHeight()
             }else{
                 isHavePic = false
             }
+            
+            // 处理转发
+            //文本处理
+            if let text = homeModel?.retweeted_status?.text {
+                let retweetText: String = text
+                /// 先处理全文
+                retweetTextLayout = self.dealText(textString: retweetText)
+            }
             updateRowHeight()
- 
+            
+            // 转发, 评论, 赞
+            if let count = homeModel?.reposts_count {
+                if count > 0 {
+                    toolbarRepostTextLayout = "\(count)"
+                }else{
+                    toolbarRepostTextLayout = "转发"
+                }
+            }
+            if let count = homeModel?.comments_count {
+                if count > 0 {
+                    toolbarCommentTextLayout = "\(count)"
+                }else{
+                    toolbarCommentTextLayout = "评论"
+                }
+            }
+            if let count = homeModel?.attitudes_count {
+                if count > 0 {
+                    toolbarLikeTextLayout = "\(count)"
+                }else{
+                    toolbarLikeTextLayout = "赞"
+                }
+            }
+        }
+    }
+    
+    func upDatePicHeight() {
+        let smallPicWidth: CGFloat = (kScreenWidth - 2 * (kWBCellPaddingPic + kWBCellPadding)) / 3.0
+        let smallPicHeight: CGFloat = smallPicWidth
+        
+        switch picArray.count {
+        case 1:
+            picSize = CGSize(width: (kScreenWidth - 2 * kWBCellPadding) * 2 / 3, height: (kScreenWidth - 2 * kWBCellPadding) * 2 / 3)
+            picHeight = (picSize?.height)!
+        case 2,3:
+            picSize = CGSize(width: kScreenWidth, height: smallPicHeight + kWBCellPaddingText)
+            picHeight = (picSize?.height)!
+        case 4,5,6:
+            picSize = CGSize(width: kScreenWidth, height: smallPicHeight * 2 + kWBCellPaddingText + kWBCellPaddingPic)
+            picHeight = (picSize?.height)!
+        case 7,8,9:
+            picSize = CGSize(width: kScreenWidth, height: smallPicHeight * 3 + kWBCellPaddingText + kWBCellPaddingPic * 2)
+            picHeight = (picSize?.height)!
+        default:
+            return
         }
     }
     
@@ -214,9 +262,12 @@ class HomeStatusLayout: NSObject {
             height += text.boundingRect(with: textSize, options: [.usesLineFragmentOrigin], context: nil).height + 10
         }
         if self.picArray.count > 0 {
-            height += picHeight
+            height += picHeight + 5
         }
-        self.height = height
+        if let text = retweetTextLayout {
+            height += text.boundingRect(with: textSize, options: [.usesLineFragmentOrigin], context: nil).height + 15
+        }
+        self.height = height + CGFloat(kWBCellToolbarHeight) + 5
     }
     
     // MARK: - 布局结果
@@ -265,7 +316,7 @@ class HomeStatusLayout: NSObject {
     //转发
     var retweetHeight: CGFloat?             //转发高度, 0为没转发
     var retweetTextHeight: CGFloat?         //转发文本高度
-    var retweetTextLayout = ""              //被转发文本
+    var retweetTextLayout: NSMutableAttributedString?              //被转发文本
     var retweetPicHeight: CGFloat?
     var retweetPicSize: CGSize?
     var retweetCardHeight: CGFloat?

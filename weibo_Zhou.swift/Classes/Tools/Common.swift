@@ -43,6 +43,10 @@ func RGB(r:CGFloat, g:CGFloat, b:CGFloat) ->UIColor {
     return UIColor(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: 1.0)
 }
 
+func CGFloatFromPixel(num: CGFloat) -> CGFloat {
+    return num / UIScreen.main.scale
+}
+
 extension DispatchTime: ExpressibleByIntegerLiteral {
     public init(integerLiteral value: Int) {
         self = DispatchTime.now() + .seconds(value)
