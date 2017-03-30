@@ -75,7 +75,7 @@
 		160214D51E8A443500BD7A35 /* WBStatusToolbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusToolbarView.swift; sourceTree = "<group>"; };
 		1602226F1E6E97C800761017 /* ZhouRegularExpressionsTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhouRegularExpressionsTools.swift; sourceTree = "<group>"; };
 		1602B1F21E78D73D00BEBB4B /* WBPicsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBPicsView.swift; sourceTree = "<group>"; };
-		1606ED401E45A50000347CBD /* weibo_Zhou.swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo_Zhou.swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1606ED401E45A50000347CBD /* 微博·Zhou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微博·Zhou.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1606ED431E45A50000347CBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1606ED481E45A50000347CBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1606ED4A1E45A50000347CBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 		1606ED411E45A50000347CBD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1606ED401E45A50000347CBD /* weibo_Zhou.swift.app */,
+				1606ED401E45A50000347CBD /* 微博·Zhou.app */,
 				1606ED541E45A50000347CBD /* weibo_Zhou.swiftTests.xctest */,
 				1606ED5F1E45A50000347CBD /* weibo_Zhou.swiftUITests.xctest */,
 			);
@@ -587,7 +587,7 @@
 			);
 			name = weibo_Zhou.swift;
 			productName = weibo_Zhou.swift;
-			productReference = 1606ED401E45A50000347CBD /* weibo_Zhou.swift.app */;
+			productReference = 1606ED401E45A50000347CBD /* 微博·Zhou.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1606ED531E45A50000347CBD /* weibo_Zhou.swiftTests */ = {
@@ -1049,7 +1049,7 @@
 					"$(PROJECT_DIR)/weibo_Zhou.swift/Classes/Vendor/libWeiboSDK",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Zhou.weibo-Zhou-swift";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "微博·Zhou";
 				SWIFT_OBJC_BRIDGING_HEADER = "weibo_Zhou.swift/Classes/Tools/weibo_Zhou.swift-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1074,7 +1074,7 @@
 					"$(PROJECT_DIR)/weibo_Zhou.swift/Classes/Vendor/libWeiboSDK",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Zhou.weibo-Zhou-swift";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "微博·Zhou";
 				SWIFT_OBJC_BRIDGING_HEADER = "weibo_Zhou.swift/Classes/Tools/weibo_Zhou.swift-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 				SWIFT_VERSION = 3.0;
