@@ -43,30 +43,30 @@ class HomeTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
         if homeStatusLayout.statusCellType == .WBStatusCellNomal {
             let cell: HomeNomalCell = tableView.dequeueReusableCell(withIdentifier: "HomeNomalCell", for: indexPath) as! HomeNomalCell
             cell.homeStatusLayout = homeStatusLayout
-            cell.selectionStyle = .none
+//            cell.selectionStyle = .none
             return cell
         }else if (homeStatusLayout.statusCellType == .WBStatusCellPic) {
             let cell: HomePicCell = tableView.dequeueReusableCell(withIdentifier: "HomePicCell", for: indexPath) as! HomePicCell
             cell.homeStatusLayout = homeStatusLayout
-            cell.selectionStyle = .none
+//            cell.selectionStyle = .none
             return cell
         }else if (homeStatusLayout.statusCellType == .WBStatusCellRetweet) {
             let cell: HomeRetweetCell = tableView.dequeueReusableCell(withIdentifier: "HomeRetweetCell", for: indexPath) as! HomeRetweetCell
             cell.homeStatusLayout = homeStatusLayout
-            cell.selectionStyle = .none
+//            cell.selectionStyle = .none
             return cell
         }else{
             let cell: HomeRetweetPicCell = tableView.dequeueReusableCell(withIdentifier: "HomeRetweetPicCell", for: indexPath) as! HomeRetweetPicCell
             cell.homeStatusLayout = homeStatusLayout
-            cell.selectionStyle = .none
+//            cell.selectionStyle = .none
             return cell
         }
         
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
@@ -77,10 +77,10 @@ class HomeTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
 //        self.estimatedRowHeight = 200
 //        self.tableHeaderView = UIView(frame: CGRect.zero)
         self.tableFooterView = UIView(frame: CGRect.zero)
-        self.register(HomeNomalCell.classForCoder(), forCellReuseIdentifier: "HomeNomalCell")
-        self.register(HomePicCell.classForCoder(), forCellReuseIdentifier: "HomePicCell")
-        self.register(HomeRetweetCell.classForCoder(), forCellReuseIdentifier: "HomeRetweetCell")
-        self.register(HomeRetweetPicCell.classForCoder(), forCellReuseIdentifier: "HomeRetweetPicCell")
+        self.register(HomeNomalCell.self, forCellReuseIdentifier: "HomeNomalCell")
+        self.register(HomePicCell.self, forCellReuseIdentifier: "HomePicCell")
+        self.register(HomeRetweetCell.self, forCellReuseIdentifier: "HomeRetweetCell")
+        self.register(HomeRetweetPicCell.self, forCellReuseIdentifier: "HomeRetweetPicCell")
         return
     }
     

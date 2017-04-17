@@ -25,10 +25,13 @@ class WBPicsView: UIView {
                     imageView.origin = CGPoint(x: kWBCellPadding, y: 0)
                     imageView.size = contentView.size
                     imageView.kf.setImage(with: URL.init(string: (homeStatusLayout?.showPic)!), completionHandler: { (image, error, type, url) in
-                        let imageWidth = imageView.height / (image?.size.height)! * (image?.size.width)!
-                        imageView.size = CGSize(width: imageWidth, height: imageView.height)
-                        if imageView.width > kScreenWidth - 2 * kWBCellPadding {
-                            imageView.size = CGSize(width: kScreenWidth - 2 * kWBCellPadding, height: imageView.height)
+                        if image != nil {
+                            let imageWidth = imageView.height / (image?.size.height)! * (image?.size.width)!
+                            imageView.size = CGSize(width: imageWidth, height: imageView.height)
+                            if imageView.width > kScreenWidth - 2 * kWBCellPadding {
+                                imageView.size = CGSize(width: kScreenWidth - 2 * kWBCellPadding, height: imageView.height)
+                                self.homeStatusLayout?.picSize = imageView.size
+                            }
                         }
                     })
                 case 2,3:
@@ -76,6 +79,7 @@ class WBPicsView: UIView {
             imageView.clipsToBounds = true
             imageView.backgroundColor = UIColor.lightGray
             imageView.isExclusiveTouch = true
+            imageView.contentMode = .scaleAspectFill
             picViewArray.add(imageView)
             contentView.addSubview(imageView)
             picArray.append(imageView)

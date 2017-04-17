@@ -32,17 +32,13 @@ class WBStatusTitleView: UIView {
                 self.headView.image = self.headView.image?.kf.image(withRoundRadius: (image?.size.width)! / 2.0, fit: (image?.size)!)
             }
             if homeStatusLayout?.userVerifyType == WBUserVerifyType.WBUserVerifyTypeOrganization {
-                avatarBadgeView.image = kImage(imageName: "avatar_enterprise_vip")
-                avatarBadgeView.image = self.setRoundedCorners(image: avatarBadgeView.image!)
+                avatarBadgeView.image = setRoundedCorners(image: UIImage(named: "avatar_enterprise_vip")!)
             }else if homeStatusLayout?.userVerifyType == WBUserVerifyType.WBUserVerifyTypeClub {
-                avatarBadgeView.image = kImage(imageName: "avatar_grassroot")
-                avatarBadgeView.image = self.setRoundedCorners(image: avatarBadgeView.image!)
+                avatarBadgeView.image = setRoundedCorners(image: UIImage(named: "avatar_grassroot")!)
             }else if homeStatusLayout?.userVerifyType == WBUserVerifyType.WBUserVerifyTypeStandard {
-                avatarBadgeView.image = kImage(imageName: "avatar_vip")
-                avatarBadgeView.image = self.setRoundedCorners(image: avatarBadgeView.image!)
+                avatarBadgeView.image = setRoundedCorners(image: UIImage(named: "avatar_vip")!)
             }else{
-                avatarBadgeView.image = kImage(imageName: "avatar_vip")
-                avatarBadgeView.image = self.setRoundedCorners(image: avatarBadgeView.image!)
+                avatarBadgeView.image = setRoundedCorners(image: UIImage(named: "avatar_vip")!)
             }
             nameLabel.textColor = (homeStatusLayout?.mbrank)! > 4 ? kWBCellNameOrangeColor : kWBCellNameNormalColor
             if (homeStatusLayout?.mbrank)! >= 5 {
@@ -124,8 +120,9 @@ class WBStatusTitleView: UIView {
     
     lazy var avatarBadgeView: UIImageView = {
         let temp: UIImageView = UIImageView()
-        temp.backgroundColor = UIColor.white
+        temp.backgroundColor = UIColor.clear
         temp.isOpaque = true
+        temp.contentMode = .scaleAspectFit
         return temp
     }()
     

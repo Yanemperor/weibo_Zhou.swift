@@ -1,6 +1,5 @@
 PODS:
   - Alamofire (4.2.0)
-  - GDPerformanceView-Swift (1.1.2)
   - Kingfisher (3.4.0)
   - SnapKit (3.1.2)
   - SwiftyJSON (3.1.4)
@@ -12,7 +11,6 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - GDPerformanceView-Swift (~> 1.1.2)
   - Kingfisher
   - SnapKit
   - SwiftyJSON
@@ -22,7 +20,6 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
-  GDPerformanceView-Swift: 18086952416fa8af2df0e7bc8cfdda63afc7e0b6
   Kingfisher: 5690cfb3d1bddf3a98d679a3a34d0b7294974ed2
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
@@ -30,6 +27,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: c89668fa2ef20964f3de1da1641b8b79e6050430
+PODFILE CHECKSUM: 4050363d74f333c78b17be4d5b70d958f7e9b8ad
 
 COCOAPODS: 1.2.0

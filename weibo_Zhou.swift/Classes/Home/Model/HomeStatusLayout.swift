@@ -179,10 +179,15 @@ class HomeStatusLayout: NSObject {
             
             if homeModel?.retweeted_status?.pic_urls != nil {
                 for item in (homeModel?.retweeted_status?.pic_urls)! {
-                    picArray.add(item["thumbnail_pic"]!)
+                    let temp: String = item["thumbnail_pic"] as! String
+                    if temp.contains("thumbnail") {
+                        let temp2 = temp.replacingOccurrences(of: "thumbnail", with: "bmiddle")
+                        picArray.add(temp2)
+                    }else{
+                        picArray.add(temp)
+                    }
                 }
             }
-            
             
             if picArray.count > 0 {
                 isHavePic = true
