@@ -22,7 +22,7 @@ public let kAppRedirectURI = "https://api.weibo.com/oauth2/default.html"
 
 //宏定义
 public let kUserDefaults = UserDefaults.standard
-public let kWBToken = "2.00KDEKPGyY87OCa62ef66d950uKdji"
+public let kWBToken = "2.00KDEKPGyY87OCf2a7141c01mHvkCD"
 public let kWBUserID = "uid"
 public let kWBRefreshToken = "wbRefreshToken"
 public var kisLogin = UserData.shared.isLongin
