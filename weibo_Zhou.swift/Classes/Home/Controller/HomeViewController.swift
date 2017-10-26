@@ -18,19 +18,15 @@ class HomeViewController: BaseViewController {
     }
     
     func initUI() -> Void {
+        let rightBtn = UIBarButtonItem.init(title: "刷新", style: .plain, target: self, action: #selector(rightClick))
+        navigationItem.rightBarButtonItem = rightBtn
         view.addSubview(homeTableView)
         homeTableView.frame = view.bounds
-        homeViewModel.requestData { 
-            self.homeTableView.homeViewModel = self.homeViewModel
-            self.homeTableView.reloadData()
-        }
-        
-//        self.performanceMoniter.startMonitoring()
-//        self.performanceMoniter.configure { (textLabel) in
-//            textLabel?.backgroundColor = UIColor.black
-//            textLabel?.textColor = UIColor.white
-//            textLabel?.layer.borderColor = UIColor.black.cgColor
-//        }
+        loadData()
+    }
+    
+    func rightClick() {
+        loadData()
     }
     
     // MARK: - View(页面处理)
@@ -46,7 +42,12 @@ class HomeViewController: BaseViewController {
     
     
     // MARK: - loading
-    
+    func loadData() {
+        homeViewModel.requestData {
+            self.homeTableView.homeViewModel = self.homeViewModel
+            self.homeTableView.reloadData()
+        }
+    }
     
     // MARK: - 懒加载
     fileprivate var homeViewModel: HomeViewModel = HomeViewModel()
